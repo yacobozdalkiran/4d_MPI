@@ -104,7 +104,7 @@ std::pair<double, double> mpi::observables::local_q_e_clover(const GaugeField& f
     double q = (F01 * F23).trace().real() - (F02 * F13).trace().real() + (F03 * F12).trace().real();
 
     // On calcule aussi l'énergie locale
-    double e_local = 0.5 * (F01.squaredNorm() + F02.squaredNorm() + F03.squaredNorm() +
+    double e_local =  (F01.squaredNorm() + F02.squaredNorm() + F03.squaredNorm() +
                             F12.squaredNorm() + F13.squaredNorm() + F23.squaredNorm());
     // 3. Le facteur global est 1/(4*pi^2) car le 1/32 a été absorbé
     // par les combinaisons et le facteur 1/8 de F.
